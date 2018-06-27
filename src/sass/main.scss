@@ -1,11 +1,83 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+////@import "component/body.scss";
+//
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+////@import "./components/bg-video";
+////@import "./components/button";
+////@import "./components/card";
+////@import "./components/composition";
+////@import "./components/feature-box";
+////@import "./components/form";
+////@import "./components/popup";
+////@import "./components/story";
+//
+////@import "./layout/footer";
+//@import "./layout/grid";
+//@import "./layout/main-grid";
+////@import "./layout/header";
+//@import "./layout/navigation";
+
+.bg1 {
+  background-color: #2998ff;
 }
 
-.App {
-  background-color: aqua;
+.bg2 {
+  background-color: #5643fa;
+}
+
+.bg3 {
+  background-color: #333333;
+}
+
+.bg4 {
+  background-color: #11459f;
+}
+
+.fullpage {
+  height: 100vh;
+  @include respond(tab-port) {
+    height: 95vh;
+  }
+}
+
+.main{
+  height:100%;
+}
+.header {
+  max-height: 20%;
+}
+
+.content {
+  height: 80%;
+}
+
+.header,
+.subNav,
+.copyright {
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.md-nav {
+  @include respond(tab-port) {
+    height: 5vh;
+  }
+}
+.md-home,
+.md-header {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+    height:100%;
+  }
 }
